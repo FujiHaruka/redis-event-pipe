@@ -1,7 +1,7 @@
 {
   "name": "redis-pubsub-relay",
   "description": "Relay EventEmitter to Redis Pub / Sub for the purpose of scalability of Node.js application.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Fuji Haruka",
   "bugs": {
     "url": "https://github.com/FujiHaruka/redis-pubsub-relay/issues"
