@@ -1,0 +1,1 @@
+This module wraps any EventEmitter-extended classes, then event methods such as `on` or `emit` will be executed through Redis Pub / Sub.

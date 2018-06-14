@@ -1,0 +1,35 @@
+/**
+ * Bud file for README.md
+ */
+
+'use strict'
+
+const {Readme} = require('the-templates')
+const pkg = require('./package.json')
+const {signature} = require('the-script-jsdoc')
+const jsdoc = require('./jsdoc.json')
+
+module.exports = Readme({
+  pkg,
+  repo: pkg.repository,
+  sections: 'doc/guides/*.md.hbs',
+  badges: {
+    travis: false,
+    npm: true,
+    standard: true
+  },
+  overview: 'doc/overview.md',
+  vars: {
+    signature: signature(
+      jsdoc,
+      {
+        classNames: jsdoc.classes.map(({name}) => name),
+      }
+    ),
+    apiPath: './doc/api/api.md'
+  }
+})
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

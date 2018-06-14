@@ -1,0 +1,70 @@
+{
+    "classes": [
+        {
+            "name": "RedisPubSubRelay",
+            "description": "Relay EventEmitter's event to Redis Pub / Sub",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "RedisPubSubRelay",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "redisConfig",
+                        "type": "object",
+                        "description": "config object to pass to redis createClient()",
+                        "default": "",
+                        "optional": "",
+                        "nullable": ""
+                    }
+                ],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "wrap",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Wrap EventEmitter-extended class",
+                    "parameters": [
+                        {
+                            "name": "EventEmitter",
+                            "type": "class",
+                            "description": "EventEmitter-extended class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "object",
+                            "description": "options",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options.restrict",
+                            "type": "Array.<String>",
+                            "description": "event names to restrict",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "quitClients",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Quit all redis clients",
+                    "parameters": [],
+                    "examples": []
+                }
+            ]
+        }
+    ]
+}

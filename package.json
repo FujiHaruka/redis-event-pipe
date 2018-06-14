@@ -1,15 +1,34 @@
 {
   "name": "redis-pubsub-relay",
+  "description": "Relay EventEmitter to Redis Pub / Sub for the purpose of scalability of Node.js application.",
   "version": "1.0.0",
-  "description": "",
-  "main": "lib",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Fuji Haruka",
+  "bugs": {
+    "url": "https://github.com/FujiHaruka/redis-pubsub-relay/issues"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "redis": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "homepage": "https://github.com/FujiHaruka/redis-pubsub-relay#readme",
+  "keywords": [
+    "EventEmitter",
+    "Redis"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": "FujiHaruka/redis-pubsub-relay",
+  "scripts": {
+    "doc": "the-script-jsdoc && coz render .README.md.bud doc/**/.*.bud",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "ape-tmpl": "^6.0.10",
+    "coz": "^7.0.2",
+    "the-script-jsdoc": "^2.0.2",
+    "the-templates": "^3.2.1"
   }
 }
