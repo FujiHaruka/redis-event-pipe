@@ -1,5 +1,5 @@
 {
-  "name": "redis-event-pipe",
+  "name": "redis-pubsub-relay",
   "version": "1.0.0",
   "description": "",
   "main": "lib",

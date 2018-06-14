@@ -1,15 +1,21 @@
-const RedisEventPipe = require('../lib/RedisEventPipe')
-const pipe = new RedisEventPipe()
+const RedisPubSubRelay = require('../lib')
+const relay = new RedisPubSubRelay()
 const EventEmitter = require('events')
 
-const WrappedEmitter = pipe.wrap(EventEmitter)
+const WrappedEmitter = relay.wrap(EventEmitter)
 const emitter = new WrappedEmitter()
 
-emitter.on('some', (data) => {
-  console.log('some event happens')
+emitter.on('something', (data) => {
   console.log(data)
+  relay.quitClients()
 })
 
-emitter.onSubscribe('some', () => {
-  emitter.emit('some', {a: 110})
+emitter.onSubscribe('something', () => {
+  emitter.emit('something', {
+    number: 110,
+    string: 'foo',
+    null: null,
+    array: [],
+    date: new Date(),
+  })
 })
